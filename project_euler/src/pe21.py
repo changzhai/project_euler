@@ -11,5 +11,12 @@
 
 import utils
 
-print('Hi')
-print (utils.factors(12))
+n = 10000
+total = 0
+
+for i in range(2, n+1):
+    x = sum(utils.factors(i))-i
+    if sum(utils.factors(x))-x == i and i != x:
+        total += i
+        
+print(total)
